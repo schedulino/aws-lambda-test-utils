@@ -81,7 +81,7 @@ export const apiGatewayProxyResultMock = (
   statusCode = 200
 ): APIGatewayProxyResult => ({
   statusCode,
-  body: JSON.stringify(body || '{}'),
+  body: body ? JSON.stringify(body) : '',
   headers: headers || undefined,
 });
 
