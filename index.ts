@@ -84,3 +84,20 @@ export const apiGatewayProxyResultMock = (
   body: JSON.stringify(body || '{}'),
   headers: headers || undefined,
 });
+
+export const login = async (
+  // tslint:disable:no-any
+  server: any,
+  email: string,
+  password: string
+): Promise<{ accessToken: string; accountId: string; idToken: string }> => {
+  const base64Password = Buffer.from(`${email}:${password}`).toString('base64');
+  const { id_token, access_token } = (await server
+    .post('/auth/login')
+    .set('Authorization', `Basic ${base64Password}`)).body;
+  const accountId = JSON.parse(
+    Buffer.from(id_token.split('.')[1], 'base64').toString('ascii')
+  ).aud;
+
+  return { accountId, accessToken: access_token, idToken: id_token };
+};
