@@ -101,3 +101,7 @@ export const login = async (
 
   return { accountId, accessToken: access_token, idToken: id_token };
 };
+
+export const logout = async (server: any, token: string): Promise<void> => {
+  return server.delete('/auth/logout').set('Authorization', `Bearer ${token}`);
+};
