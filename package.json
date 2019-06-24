@@ -77,7 +77,7 @@
     "prettier": "1.18.2",
     "rimraf": "2.6.3",
     "semantic-release": "^15.13.14",
-    "tslint": "5.17.0",
+    "tslint": "5.18.0",
     "tslint-config-airbnb": "5.11.1",
     "tslint-config-prettier": "1.18.0",
     "typescript": "3.5.2"
