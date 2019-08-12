@@ -45,22 +45,13 @@
     }
   },
   "lint-staged": {
-    "linters": {
-      "*.ts": [
-        "npm run lint:fix",
-        "git add"
-      ],
-      "*.{ts,md,json}": [
-        "npm run prettier:fix",
-        "git add"
-      ]
-    },
-    "concurrent": false,
-    "relative": true,
-    "ignore": [
-      "node_modules",
-      "dist",
-      "package-lock.json"
+    "*.ts": [
+      "npm run lint:fix",
+      "git add"
+    ],
+    "*.{ts,md,json}": [
+      "npm run prettier:fix",
+      "git add"
     ]
   },
   "config": {
@@ -76,7 +67,7 @@
     "lint-staged": "9.2.1",
     "prettier": "1.18.2",
     "rimraf": "2.6.3",
-    "semantic-release": "^15.13.14",
+    "semantic-release": "15.13.19",
     "tslint": "5.18.0",
     "tslint-config-airbnb": "5.11.1",
     "tslint-config-prettier": "1.18.0",
