@@ -60,7 +60,7 @@
     }
   },
   "devDependencies": {
-    "@types/aws-lambda": "8.10.33",
+    "@types/aws-lambda": "8.10.57",
     "commitizen": "4.0.3",
     "cz-conventional-changelog": "3.1.0",
     "husky": "3.1.0",
